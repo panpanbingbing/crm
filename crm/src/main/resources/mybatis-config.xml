@@ -5,9 +5,12 @@
 <configuration>
 <properties resource="MysqlPage.properties"/>
 
+
  <typeAliases>
-  <package name="com.obj.domain"/>
+  <package name="com.bjpowernode.crm.settings.domain"/>
+  <package name="com.bjpowernode.crm.workbench.domain"/>
  </typeAliases>
+
  <environments default="development">
   <environment id="development">
    <transactionManager type="JDBC"/>
@@ -21,7 +24,8 @@
  </environments>
  <mappers>
 
-  <package name="com.obj.Dao"/>
+  <package name="com.bjpowernode.crm.settings.dao"/>
+  <package name="com.bjpowernode.crm.workbench.dao"/>
 
  </mappers>
 </configuration>

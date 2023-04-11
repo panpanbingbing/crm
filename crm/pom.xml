@@ -44,6 +44,11 @@
       <artifactId>log4j-core</artifactId>
       <version>2.19.0</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j2-impl</artifactId>
+      <version>2.19.0</version>
+    </dependency>
 
 
     <!-- https://mvnrepository.com/artifact/com.alibaba.fastjson2/fastjson2 -->
@@ -52,11 +57,26 @@
       <artifactId>fastjson2</artifactId>
       <version>2.0.19</version>
     </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis</artifactId>
       <version>3.5.6</version>
+    </dependency>
+
+
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.0.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.0.0</version>
     </dependency>
 
   </dependencies>
@@ -66,11 +86,19 @@
   <build>
     <resources>
       <resource>
-        <directory>src/main/java</directory><!--所在的目录-->
-          <includes><!--包括目录下的.properties,.xml文件都会扫描到-->
-            <include>**/*.properties</include>
-            <include>**/*.xml</include>
-          </includes>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
+        <filtering>false</filtering>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
         <filtering>false</filtering>
       </resource>
     </resources>

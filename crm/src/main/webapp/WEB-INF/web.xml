@@ -11,6 +11,14 @@
 <!--            <servlet-name>student</servlet-name>-->
 <!--            <async-supported></async-supported>-->
 <!--        </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>login</servlet-name>-->
+<!--        <url-pattern>com.bjpowernode.crm.settings.web.controller.UserController</url-pattern>-->
+<!--    </servlet-mapping>-->
+<!--    <servlet>-->
+<!--        <servlet-name>login</servlet-name>-->
+<!--        <async-supported>User/login.do</async-supported>-->
+<!--    </servlet>-->
 
 
 
